@@ -1,0 +1,29 @@
+{
+  "title": "SA-MIL: Stabilized Attention MIL for Visual Senescence Scoring at Small Sample Size",
+  "upload_type": "software",
+  "description": "Reference implementation and evaluation protocol for SA-MIL, accompanying the ISBI 2027 paper <em>Automated Visual Senescence Scoring of Stem-Cell Cultures from Brightfield Microscopy: Stabilized Attention MIL at Small Sample Size</em>. Contains the frozen-feature leave-one-sample-out protocol, the SA-MIL aggregator with all four ablation switches, baseline aggregators (mean-pool, max-pool, gated attention), permutation inference, and the per-run result table behind the paper's main table.<br><br><strong>The microscopy images and extracted feature tensors are not included.</strong> The images are restricted and available from the authors on request; extracted features are derived from those images. The protocol is therefore fully inspectable and re-runnable, but exact numeric reproduction requires the private dataset.",
+  "creators": [
+    {
+      "name": "Ou, Guanxi",
+      "affiliation": "East China University of Science and Technology"
+    },
+    {
+      "name": "Wang, Zhanquan",
+      "affiliation": "East China University of Science and Technology"
+    }
+  ],
+  "license": "mit",
+  "access_right": "open",
+  "keywords": [
+    "multiple instance learning",
+    "attention MIL",
+    "cellular senescence",
+    "hUC-MSC",
+    "frozen features",
+    "small-sample learning",
+    "biomedical imaging",
+    "reproducibility"
+  ],
+  "notes": "Corresponding author: Zhanquan Wang (zhqwang@ecust.edu.cn). This work received no external funding.",
+  "version": "1.0.0"
+}
