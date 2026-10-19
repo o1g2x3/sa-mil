@@ -1,0 +1,29 @@
+% Theme package hints for this table (add in your preamble):
+% \usepackage{booktabs}
+% \usepackage{multirow}
+% \usepackage[table]{xcolor}
+% \usepackage{diagbox}
+% \usepackage{makecell}
+% \usepackage{adjustbox}
+% \usepackage{amssymb}
+% \usepackage{pifont}
+\setlength{\heavyrulewidth}{1.0pt}
+\setlength{\lightrulewidth}{0.5pt}
+\setlength{\arrayrulewidth}{0.5pt}
+\setlength{\aboverulesep}{0pt}
+\setlength{\belowrulesep}{0pt}
+\begin{table}[htbp]
+\centering
+\caption{SA-MIL ablations (DINOv2). Uniform references: entropy ln 64 = 4.159, top-1 = 0.0156. alpha/tau only apply to stabilized configs; the single-branch config (Ab-3) has no branch variance, hence no uncertainty column.}
+\label{tab:ablation}
+\begin{tabular}{ccccccccc}
+\toprule
+\textbf{Config} & \textbf{Seeds} & \textbf{Spearman rho} & \textbf{R2} & \textbf{unc vs |resid| (rho)} & \textbf{Entropy} & \textbf{Top-1} & \textbf{alpha} & \textbf{tau} \\
+\midrule
+Ab-1 Full SA-MIL & 5 & 0.893 $\pm{}$ 0.026 & 0.800 $\pm{}$ 0.043 & 0.164 & 4.124 & 0.0247 & 0.491 & 0.736 \\
+Ab-2 No stabilization & 5 & 0.892 $\pm{}$ 0.032 & 0.804 $\pm{}$ 0.039 & 0.030 & 4.098 & 0.0329 & \textemdash & \textemdash \\
+Ab-3 Single branch & 3 & 0.900 $\pm{}$ 0.004 & 0.817 $\pm{}$ 0.019 & \textemdash & 4.115 & 0.0255 & 0.492 & 0.757 \\
+Ab-4 No residual & 3 & 0.896 $\pm{}$ 0.005 & 0.808 $\pm{}$ 0.018 & 0.159 & 4.133 & 0.0233 & 0.489 & 0.746 \\
+\bottomrule
+\end{tabular}
+\end{table}

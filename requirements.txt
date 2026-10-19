@@ -1,0 +1,21 @@
+# SA-MIL reference implementation — dependencies
+#
+# NOTE: the versions used for the runs reported in the paper are not yet
+# recorded (see README §8). The floors below are the minimums the code was
+# written against; they are NOT a verified pin. Regenerate this file with
+# `pip freeze` on the machine that produced the reported numbers before
+# treating any result as bit-for-bit reproducible.
+
+# core
+torch>=2.1
+torchvision>=0.16
+numpy>=1.24
+pandas>=2.0
+
+# frozen backbones + weight loading
+timm>=0.9
+safetensors>=0.4
+
+# optional: attention visualization
+matplotlib>=3.7
+Pillow>=10.0

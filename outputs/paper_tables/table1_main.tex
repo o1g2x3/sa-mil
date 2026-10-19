@@ -1,0 +1,33 @@
+% Theme package hints for this table (add in your preamble):
+% \usepackage{booktabs}
+% \usepackage{multirow}
+% \usepackage[table]{xcolor}
+% \usepackage{diagbox}
+% \usepackage{makecell}
+% \usepackage{adjustbox}
+% \usepackage{amssymb}
+% \usepackage{pifont}
+\setlength{\heavyrulewidth}{1.0pt}
+\setlength{\lightrulewidth}{0.5pt}
+\setlength{\arrayrulewidth}{0.5pt}
+\setlength{\aboverulesep}{0pt}
+\setlength{\belowrulesep}{0pt}
+\begin{table}[htbp]
+\centering
+\caption{Main results: 43-sample LOOCV, frozen DINOv2 ViT-B/14 features. Neural rows: mean ¡À seed std; CI is the mean of per-seed bootstrap intervals. Ridge/oracle rows: single deterministic run with subject-level bootstrap CI.}
+\label{tab:main}
+\begin{tabular}{ccccccc}
+\toprule
+\textbf{Method} & \textbf{Aggregation} & \textbf{Seeds} & \textbf{Spearman rho} & \textbf{95\% CI} & \textbf{R2} & \textbf{MAE} \\
+\midrule
+Gene-oracle (RNA-seq, anchor) & ridge on 24,138 genes & 1 & 0.990 & [0.969, 0.995] & 0.973 & 0.0038 \\
+MeanPool (ridge) & mean of FOV features & \textemdash & 0.945 & [0.891, 0.965] & 0.903 & 0.0073 \\
+MaxPool (ridge) & max of FOV features & \textemdash & 0.893 & [0.800, 0.936] & 0.796 & 0.0111 \\
+Ilse Attention-MIL & gated attention & 3 & 0.749 $\pm{}$ 0.047 & [0.482, 0.877] & 0.346 & 0.0185 \\
+Ab-1 Full SA-MIL (main) & SA-MIL & 5 & 0.893 $\pm{}$ 0.026 & [0.785, 0.942] & 0.800 & 0.0100 \\
+Ab-2 No stabilization & SA-MIL & 5 & 0.892 $\pm{}$ 0.032 & [0.789, 0.942] & 0.804 & 0.0100 \\
+Ab-3 Single branch (recommended simplified) & SA-MIL & 3 & 0.900 $\pm{}$ 0.004 & [0.813, 0.939] & 0.817 & 0.0098 \\
+Ab-4 No residual & SA-MIL & 3 & 0.896 $\pm{}$ 0.005 & [0.796, 0.943] & 0.808 & 0.0097 \\
+\bottomrule
+\end{tabular}
+\end{table}
