@@ -1,5 +1,7 @@
 # SA-MIL — reference implementation and evaluation protocol
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23471845.svg)](https://doi.org/10.5281/zenodo.23471845)
+
 Code accompanying the ISBI 2027 submission:
 
 > **Automated Visual Senescence Scoring of Stem-Cell Cultures from Brightfield
@@ -189,3 +191,18 @@ to the respective upstream projects.
 
 Please update this entry with the final page numbers and DOI once the
 proceedings are published.
+
+If you cite the **software** itself:
+
+```bibtex
+@software{ou2026samilsenescence,
+  title     = {SA-MIL: Stabilized Attention MIL for Visual Senescence
+               Scoring at Small Sample Size},
+  author    = {Ou, Guanxi and Wang, Zhanquan},
+  year      = {2026},
+  version   = {1.0.0},
+  publisher = {Zenodo},
+  doi       = {10.5281/zenodo.23471845},
+  url       = {https://doi.org/10.5281/zenodo.23471845}
+}
+```
